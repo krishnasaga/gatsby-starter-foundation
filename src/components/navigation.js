@@ -8,20 +8,20 @@ import Theme from "../components/theme"
 const MenuItems = [
   {
     path: "/",
-    title: "Home",
+    title: "Home"
   },
   {
     path: "/about",
-    title: "About",
+    title: "About"
   },
   {
     path: "/blog",
-    title: "Blog",
+    title: "Blog"
   },
   {
     path: "/contact",
-    title: "Contact",
-  },
+    title: "Contact"
+  }
 ]
 
 const ListLink = props => (
@@ -39,13 +39,13 @@ class Navigation extends React.Component {
 
   handleToggleClick() {
     this.setState(state => ({
-      showMenu: !state.showMenu,
+      showMenu: !state.showMenu
     }))
   }
 
   render() {
     const listMenuItems = MenuItems.map((menuItem, index) => (
-      <ListLink key={index} to={menuItem.path}>
+      <ListLink key={index} to={menuItem.path} color={"black"}>
         {menuItem.title}
       </ListLink>
     ))
@@ -79,16 +79,16 @@ export default Navigation
 const navStyle = {
   menu: {
     ul: {
-      bg: "siteColor",
-    },
+      bg: "siteColor"
+    }
   },
   theme: {
     display: ["block", "block", "block", "none"],
-    p: " 25px 20px 20px",
+    p: " 25px 20px 20px"
   },
   border: {
     bg: "borderColor",
     borderTop: "1px solid transparent",
-    display: ["block", "block", "block", "none"],
-  },
+    display: ["block", "block", "block", "none"]
+  }
 }

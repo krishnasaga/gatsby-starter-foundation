@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui"
 import { graphql, Link } from "gatsby"
-import { GatsbyImage } from "gatsby-plugin-image"
 import { RiArrowRightSLine } from "react-icons/ri"
 import {
   RiFacebookBoxFill,
@@ -17,7 +16,7 @@ import {
   RiSkypeFill,
   RiDribbbleFill,
   RiMediumFill,
-  RiBehanceFill,
+  RiBehanceFill
 } from "react-icons/ri"
 import { FaWordpress, FaVk } from "react-icons/fa"
 
@@ -25,6 +24,7 @@ import Layout from "../components/layout"
 import BlogListHome from "../components/blog-list-home"
 import Seo from "../components/seo"
 import Icons from "../util/socialmedia.json"
+import { Box, Text } from "theme-ui"
 
 export const pageQuery = graphql`
   query HomeQuery($id: String!) {
@@ -73,9 +73,6 @@ export const pageQuery = graphql`
 const HomePage = ({ data }) => {
   const { markdownRemark, posts } = data // data.markdownRemark holds your post data
   const { frontmatter, html } = markdownRemark
-  const Image = frontmatter.featuredImage
-    ? frontmatter.featuredImage.childImageSharp.gatsbyImageData
-    : ""
   const sIcons = Icons.socialIcons.map((icons, index) => {
     return (
       <div key={"social icons" + index}>
@@ -197,47 +194,81 @@ const HomePage = ({ data }) => {
   return (
     <Layout>
       <Seo />
-      <div className="home-banner grids col-1 sm-2">
-        <div>
-          <h1 className="title">{frontmatter.title}</h1>
-          <p
-            className="tagline"
-            sx={{
-              color: "muted",
-            }}
-          >
-            {frontmatter.tagline}
-          </p>
-  
-          <Link
-            to={frontmatter.cta.ctaLink}
-            className="button"
-            sx={{
-              variant: "variants.button",
-            }}
-          >
-            {frontmatter.cta.ctaText}
-            <span className="icon -right">
-              <RiArrowRightSLine />
-            </span>
-          </Link>
-          <div
-            className="social-icons"
-            sx={{
-              variant: "variants.socialIcons",
-            }}
-          >
-            {sIcons}
-          </div>
-        </div>
-        <div>
-        <div
-            className="description"
-            dangerouslySetInnerHTML={{ __html: html }}
-          />
-        </div>
-      </div>
-      <BlogListHome data={posts} />
+      <Box
+        sx={{
+          background: `linear-gradient(
+            rgba(0, 0, 0, 0.85),
+            rgba(0, 0, 0, 0.85)
+          ), url(/assets/pexels-ron-lach-9618450.jpeg)
+          `,
+          height: "500px",
+          width: "100wh",
+          backgroundSize: "100%",
+          backgroundPositionY: "50%"
+        }}
+      >
+        <Box pt={100} sx={{ textAlign: "center" }}>
+          <Text as={"h1"} color={"white"} sx={{ fontSize: 8 }}>
+            Krishna Sagar R
+          </Text>
+          <Text as={"p"} p={10} color={"white"} sx={{ fontSize: 4 }}>
+            Technical Architect, Web3 and Data Science Enthusiast
+          </Text>
+          <Text as={"p"} color={"white"} sx={{ fontSize: 4 }}>
+            Specalized in digital user interfaces
+          </Text>
+        </Box>
+      </Box>
+      <Text
+        as={"p"}
+        pt={100}
+        sx={{ fontSize: 4, textAlign: "center", margin: "0 auto" }}
+        className="container"
+      >
+        Software architecture is not just about working software. It heavily
+        influences how an individual or a team makes informed decisions; hence,
+        it has a significant cultural impact on the organisation. Such
+        architecture should be carefully crafted as a fabric of agility.
+      </Text>
+
+      <Text
+        as={"p"}
+        pt={100}
+        sx={{ fontSize: 4, textAlign: "center", margin: "0 auto" }}
+        className="container"
+      >
+        I first understand the vision and value proposition of your product or
+        project. Then I will set the technology roadmap to achieve near term and
+        long-term goals of the organisation. And create an evolutionary
+        architecture for the front end.
+      </Text>
+
+      <Text
+        as={"p"}
+        pt={100}
+        sx={{ fontSize: 4, textAlign: "center", margin: "0 auto" }}
+        className="container"
+      >
+        With the convergence of designers, developers and business thinking, I
+        will empathise needs and wants and connect the dots to create a
+        satisfying experience with user analytics, design systems, performance
+        and business editing tools.
+      </Text>
+
+      <Text
+        as={"p"}
+        pt={100}
+        sx={{ fontSize: 4, textAlign: "center", margin: "0 auto" }}
+        className="container"
+      >
+        I'm a visionary engineer who helps organisations build the future with
+        resilient and highly scalable software architecture with cloud
+        infrastructure and helps move towards the long-term vision.
+      </Text>
+
+      <Box className={"container"} pt={100} sx={{ margin: "0 auto" }}>
+        <BlogListHome data={posts} />
+      </Box>
     </Layout>
   )
 }

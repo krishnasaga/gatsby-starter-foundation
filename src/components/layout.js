@@ -43,7 +43,7 @@ const Layout = ({ children, className, props }) => {
           <Theme />
         </div>
       </Header>
-      <main className={"container " + className}>{children}</main>
+      <main className={className}>{children}</main>
       <Footer />
     </div>
   )
@@ -55,11 +55,11 @@ const layoutStyle = {
   appearance: {
     display: ["none", "none", "none", "flex"],
     alignItems: "center",
-    gap: 4,
+    gap: 4
   },
   nav: {
     display: "flex",
     alignItems: "center",
-    gap: 4,
-  },
+    gap: 4
+  }
 }
