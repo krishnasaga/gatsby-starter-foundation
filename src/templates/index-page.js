@@ -208,10 +208,7 @@ const HomePage = ({ data }) => {
           >
             {frontmatter.tagline}
           </p>
-          <div
-            className="description"
-            dangerouslySetInnerHTML={{ __html: html }}
-          />
+  
           <Link
             to={frontmatter.cta.ctaLink}
             className="button"
@@ -234,6 +231,10 @@ const HomePage = ({ data }) => {
           </div>
         </div>
         <div>
+        <div
+            className="description"
+            dangerouslySetInnerHTML={{ __html: html }}
+          />
           {Image ? (
             <GatsbyImage
               image={Image}
