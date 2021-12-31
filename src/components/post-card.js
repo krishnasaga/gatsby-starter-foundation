@@ -7,7 +7,7 @@ const PostCard = ({ data }) => (
   <article
     className="post-card"
     sx={{
-      bg: "cardBg",
+      bg: "cardBg"
     }}
   >
     {data.frontmatter.featuredImage ? (
@@ -26,7 +26,7 @@ const PostCard = ({ data }) => (
         <Link
           to={data.frontmatter.slug}
           sx={{
-            variant: "links.postLink",
+            variant: "links.postLink"
           }}
         >
           {data.frontmatter.title}
@@ -35,7 +35,7 @@ const PostCard = ({ data }) => (
       <p
         className="meta"
         sx={{
-          color: "muted",
+          color: "muted"
         }}
       >
         <time>{data.frontmatter.date}</time>

@@ -196,40 +196,90 @@ const HomePage = ({ data }) => {
       <Seo />
       <Box
         sx={{
-          background: `linear-gradient(
-            rgba(0, 0, 0, 0.85),
-            rgba(0, 0, 0, 0.85)
-          ), url(/assets/pexels-ron-lach-9618450.jpeg)
-          `,
+          position: "relative",
           height: "500px",
           width: "100wh",
           backgroundSize: "100%",
           backgroundPositionY: "50%"
         }}
       >
+        <Box
+          sx={{
+            height: "500px",
+            right: "0",
+            width: "50%",
+            position: "absolute",
+            zIndex: "-1",
+            background: `linear-gradient(
+            rgba(255, 255, 255, 0),
+            rgba(255, 255, 255, 1)
+          ), url(/assets/pexels-adrien-olichon-3137058.jpeg)`,
+            backgroundSize: "100%",
+            backgroundRepeat: "no-repeat",
+            backgroundPositionY: "50%"
+          }}
+        />
+        <Box
+          sx={{
+            height: "500px",
+            left: "0",
+            width: "50%",
+            position: "absolute",
+            zIndex: "-1",
+            transform: "rotateY(180deg)",
+            background: `linear-gradient(
+              rgba(255, 255, 255, 0),
+              rgba(255, 255, 255, 1)
+          ), url(/assets/pexels-adrien-olichon-3137058.jpeg)`,
+            backgroundSize: "100%",
+            backgroundRepeat: "no-repeat",
+            backgroundPositionY: "50%"
+          }}
+        />
+        <Box
+          bg={"white"}
+          sx={{
+            position: "absolute",
+            zIndex: "-1",
+            left: "50%",
+            right: "50%",
+            top: "100%",
+            height: "1000px",
+            width: "100%",
+            transform: "translate(-50%,-50%)",
+            background:
+              "radial-gradient(circle, rgba(255,255,255,1) 40%, rgba(255,255,255,0.5) 60%,rgba(255,255,255,0.7) 80%, rgba(255,255,255,0) 100%)"
+          }}
+        ></Box>
         <Box pt={100} sx={{ textAlign: "center" }}>
-          <Text as={"h1"} color={"white"} sx={{ fontSize: 8 }}>
+          <Text as={"h1"} sx={{ fontSize: 8 }}>
             Krishna Sagar R
           </Text>
-          <Text as={"p"} p={10} color={"white"} sx={{ fontSize: 4 }}>
+          <Text as={"p"} p={10} sx={{ fontSize: 4 }}>
             Technical Architect, Web3 and Data Science Enthusiast
           </Text>
-          <Text as={"p"} color={"white"} sx={{ fontSize: 4 }}>
+          <Text as={"p"} sx={{ fontSize: 4 }}>
             Specalized in digital user interfaces
           </Text>
         </Box>
       </Box>
-      <Text
-        as={"p"}
-        pt={100}
-        sx={{ fontSize: 4, textAlign: "center", margin: "0 auto" }}
-        className="container"
-      >
-        Software architecture is not just about working software. It heavily
-        influences how an individual or a team makes informed decisions; hence,
-        it has a significant cultural impact on the organisation. Such
-        architecture should be carefully crafted as a fabric of agility.
-      </Text>
+      <Box sx={{}}>
+        <Text
+          as={"p"}
+          pt={100}
+          sx={{
+            fontSize: 4,
+            textAlign: "center",
+            margin: "0 auto"
+          }}
+          className="container"
+        >
+          Software architecture is not just about working software. It heaveily
+          influences how an individual or a team makes informed decisions;
+          hence, it has a significant cultural impact on the organisation. Such
+          architecture should be carefully crafted as a fabric of agility.
+        </Text>
+      </Box>
 
       <Text
         as={"p"}
