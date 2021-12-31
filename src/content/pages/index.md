@@ -9,4 +9,10 @@ cta:
   ctaLink: /about
 ---
 
-He is a award winning gaming graphic designer, based in sunny side of California. Working as Principal designer at Bethesda
+Software architecture is not just about working software. It heavily influences how an individual or a team makes informed decisions; hence, it has a significant cultural impact on the organisation. Such architecture should be carefully crafted as a fabric of agility. 
+
+I first understand the vision and value proposition of your product or project. Then I will set the technology roadmap to achieve near term and long-term goals of the organisation. And create an evolutionary architecture for the front end.
+
+With the convergence of designers, developers and business thinking, I will empathise needs and wants and connect the dots to create a satisfying experience with user analytics, design systems, performance and business editing tools. 
+
+I'm a visionary engineer who helps organisations build the future with resilient and highly scalable software architecture with cloud infrastructure and helps move towards the long-term vision.
